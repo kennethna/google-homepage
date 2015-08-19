@@ -1,2 +1,2 @@
 # google-homepage
-asdfadsf
+HTML/CSS Project: Google Homepage
