@@ -1,47 +1,65 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 		<title>Google</title>
+		<!-- I used a reset css to clear away any default formatting that would
+		mess up my custom styling. I also added the favicon (the logo on the title bar). -->
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="shortcut icon" href="./images/favicon">
 	</head>
 	<body>
-
-		<div id="header">
-			<ul>
-			<!-- Note: all links lead no where -->
-				<li><a href="#">+You</a></a></li>
-				<li><a href="#"><font color="white">Search</font></a></li>
-				<li><a href="#">Images</a></li>
-				<li><a href="#">Maps</a></li>
-				<li><a href="#">Play</a></li>
-				<li><a href="#">YouTube</a></li>
-				<li><a href="#">News</a></li>
-				<li><a href="#">Gmail</a></li>
-				<li><a href="#">Drive</a></li>
-				<li><a href="#">Calendar</a></li>
-				<li><a href="#">More ...</a></li>
-			</ul>
+		<!-- divs for the header and footer bars are useful to organize the links on each.
+		Making the container divs relative and whatever structure to hold the links absolute
+		is useful here-->
+		<div id="container">
+			<div id="topbar">
+				<!-- unorded lists work well for organizing the links. make sure to list them from right to left order. -->
+				<ul>
+					<li>
+						<a href="#">
+							<!-- border-radius: 100% makes complete circles -->
+							<img src="./images/blueperson.jpg"  style="border-radius: 100%"/>
+						</a>
+					</li>
+					<li><div id="share">Share</div></li>
+					<li>
+						<a href="https://plus.google.com/u/0/notifications/all?hl=en">
+							<img src="./images/notification.png">
+						</a>
+					</li>
+					<li>
+						<a href="http://www.google.com/intl/en/about/products/">
+							<img src="./images/apps.png">
+						</a>
+					</li>
+					<li><a href="https://images.google.com/">Images</a></li>
+					<li><a href="https://mail.google.com">Gmail</a></li>
+					<li><a href="https://plus.google.com">+Name</a></li>
+				</ul>
+			</div>
+			<img id="logo" src="./images/logo.png">
+			<div id="searchbar">
+				<form action="#" method="post">
+					<input name="search" type="search">
+				</form>
+			<div id="searchOptions">
+				<div class="button">Google Search</div>
+				<div class="button">I'm Feeling Lucky</div>
+			</div>
+			<div id="bottombar">
+				<ul id="bottomright">
+					<li><a href="https://www.google.com/preferences">Settings</a></li>
+					<li>
+						<a href="http://www.google.com/intl/en/policies/">Privacy & Terms</a>
+					</li>
+				</ul>
+				<ul id="bottomleft">
+					<li><a href="https://www.google.com/intl/en/about/">About</a></li>
+					<li><a href="https://www.google.com/services/">Business</a></li>
+					<li><a href="http://www.google.com/intl/en/ads/">Advertising</a></li>
+				</ul>
+			</div>
 		</div>
-		<div id="signin_button">
-		<!-- Button is in a div to fine-tune its placement (is there a better way?) -->
-			<button>SIGN IN</button>
-		</div>
-		<div id="center_piece">
-		<!-- "center_piece" div centers its children, but <center></center> would work too -->
-			<img src="logo.png" width="275" height="95" id="logo">
-			<input type="text" id="search_box">
-			<button class="search_button">Google Search</button>
-			<button class="search_button">I'm Feeling Lucky</button>
-		</div>
-		<div id="footer">
-			<ul>
-				<li><a href="#">Advertising Programs</a></li>
-				<li><a href="#">Business Solutions</a></li>
-				<li><a href="#">Privacy &amp; Terms</a></li>
-				<li><a href="#">+Google</a></li>
-				<li><a href="#">About Google</a></a></li>
-			</ul>
-		</div>
-		
 	</body>
 </html>
